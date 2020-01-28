@@ -16,11 +16,10 @@ The data is a large annotated corpus in the .tags files saved in “gmb-2.2.0.zi
     Step 6: Train Other LSTM models, like forward or backward RNN's. 
 
 ### Classifier:
-Here,I developed a deep bidirectional long short-term memory (LSTM) recurrent neural network.The reason I chose Bi_LSTM is that this RNN’s provides a very elegant way of dealing with sequential data while memorizing big correlations between sequence points. For many sequence labeling tasks, it is beneficial to have access to both past (left) and future (right) contexts, so I applied the Bidirectional Recurrent Neural Networks (RNNs). I also compared the result with just forwarding or backward RNN's to explore which one performs faster and better. 
+Here, I developed a deep bidirectional long short-term memory (LSTM) recurrent neural network.The reason I chose Bi_LSTM is that this RNN’s provides a very elegant way of dealing with sequential data while memorizing big correlations between sequence points. For many sequence labeling tasks, it is beneficial to have access to both past (left) and future (right) contexts, so I applied the Bidirectional Recurrent Neural Networks (RNNs). I also compared the result with just forwarding or backward RNN's to explore which one performs faster and better. 
 
 ### Metrics:
-
-
+Since we are dealing with a multi-classification problem here, tag labels are highly imbalanced and the model didn't predict some tags, I preferred to evaluate the model base on Precision, Recall, and F1 score. F1-score which is a trade of between Precision and Recall is about 87.92%. 
 
 ### Results:
 
