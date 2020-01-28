@@ -22,6 +22,13 @@ Here, I developed a deep bidirectional long short-term memory (LSTM) recurrent n
 Since we are dealing with a multi-classification problem here, tag labels are highly imbalanced and the model didn't predict some tags, I preferred to evaluate the model base on Precision, Recall, and F1 score. F1-score which is a trade of between Precision and Recall is about 87.92%. 
 
 ### Results:
+The accuracy plot shows how well the model was able to generalize to the new sequences by accuracy close to 98%. But, as I mentioned before accuracy is not the best metric for this kind of multi_classification tasks specially for NER modeling. The F1 score usually being used as a metric for this kind of task which was about 87.92%. But please see the training and validating accuracy plot as below:
+
+![](images/Accuracy_train_test.png)
+
+Out of 22 different tags, the model was able to predict well on just 17 tags. It means the labels require more cleaning for further analysis. Please see the below confusion matrix:
+
+![](images/cf.png)
 
 
 ### Libraries:
