@@ -30,4 +30,4 @@ tensorflow 2.0.0-rc1
 keras 2.3. 0
 
 ### References:
-Got inspired by [This kaggle competition] https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus , [this paper] https://arxiv.org/abs/1606.06871 and [this one] https://arxiv.org/pdf/1603.01354.pdf .
+Got inspired by [This kaggle competition]https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus , [this paper]https://arxiv.org/abs/1606.06871 and [this one]https://arxiv.org/pdf/1603.01354.pdf .
