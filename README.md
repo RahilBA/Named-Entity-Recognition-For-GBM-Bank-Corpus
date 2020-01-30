@@ -4,7 +4,7 @@
 The purpose of this research was to build a Sequential Recurrent Neural Net classifier to predict the named entities of a big annotated corpus from Groningen Meaning Bank.
 
 ### Data:
-The data is a large annotated corpus in the .tags files saved in “gmb-2.2.0.zip” on my local. All the tag files were merged and saved in a temporary file named “temp_tags”. The merged data is saved as a pandas data frame with 5 columns with the given headers, “word”, ”pos”, ”token”, “tag”. The target variable is the tag column which has 41 different named entities.
+The data is a large annotated corpus in the .tags files saved in “gmb-2.2.0.zip” on my local. All the tag files were merged and saved in a temporary file named “temp_tags” using the ZipFile and "Merge_Clean_Data", user_defined, functions. The merged data is saved as a pandas data frame with 5 columns with the given headers, “word”, ”pos”, ”token”, “tag”. The target variable is the tag column which has 41 different named entities. The tags with less than 15 occurrences were replaced with no label, "o", since they were labeled incorrectly. For example, "of" was labeled as time instead of O. After this cleaning step, the number of unique tags reduced to 22.
 
 ### Contents of Jupyter notebook:
     Step 0: Import Data  
@@ -30,6 +30,8 @@ Out of 22 different tags, the model was able to predict well on just 17 tags. It
 
 ![](Images/CF.png)
 
+### Potential improvements:
+As I mentioned before, even though the model performs well, but it couldn't predict some tags. I believe it can be enhanced by taking more cleaning steps like grouping and correcting the labels in the original dataset. 
 
 ### Libraries:
 tensorflow 2.0.0-rc1  
