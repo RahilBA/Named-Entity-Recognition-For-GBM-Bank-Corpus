@@ -31,7 +31,7 @@ Out of 22 different tags, the model was able to predict well on just 17 tags. It
 ![](Images/CF.png)
 
 ### Potential improvements:
-As I mentioned before, even though the model performs well, but it couldn't predict some tags. I believe it can be enhanced by taking more cleaning steps like grouping and correcting the labels in the original dataset. Also, we might increase the model's predictability on low occurrence tags if we train a base fine-tune BERT. 
+As I mentioned before, even though the model performs well, but it couldn't predict some tags. I believe it can be enhanced by taking more cleaning steps like grouping and correcting the labels in the original dataset. Also, we might increase the model's predictability on low occurrence tags if we train a base fine-tune BERT. Using RNN, 2 issues might happen. One is Exploding gradiant: gradiants greater than 1. And second is vanishing gradiants when small values are multiplied together and caused small gradiants. So, we should add additional step called "Gated Recurrent Units" or GRU layer as a gate controller. At this layer, a gate value is multiply by tanh activation function if the result is close to zero, it is not an important information. But, if it is close to 1, it is going to be considered as important information and added to the model. It also manage overfitting as well. 
 
 ### Libraries:
 tensorflow 2.0.0-rc1  
